@@ -1,3 +1,5 @@
+import 'data_struct/tree_node.dart';
+
 class Solution {
   bool isSymmetric(TreeNode? root) {
     if (root?.val == null) return false;
@@ -12,17 +14,5 @@ class Solution {
     if (root?.val == null) return;
     scanNode(root?.left);
     scanNode(root?.right);
-  }
-}
-
-class TreeNode {
-  int? val;
-  TreeNode? left;
-  TreeNode? right;
-  TreeNode([this.val = 0, this.left, this.right]);
-
-  @override
-  String toString() {
-    return "Node: val = $val, TL: $left, TR: $right";
   }
 }
